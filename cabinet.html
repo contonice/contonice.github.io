@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Кабинет</title>
-<style>
-p {font-size: 500pt}
-</style>
- </head> 
- <body> 
-<p> 24 </p>
- </body>
+<html lang="ru">
+<head>
+				<title>Заголовок страницы</title>
+				<style>
+								button {
+												width:100%;
+												height:200px;
+												font-size:250%;
+								}
+								p {
+												font-size:250%;
+								}
+				</style>
+</head>
+<body>
+				<button id="but" type="button" onclick="clicked()">Нажми сюда
+</button>
+<p id="textp"> </p>
+
+				<script>
+								var req = 200;
+								var clicks = 0;
+								function clicked() {
+												clicks++;
+												let tmp = document.getElementById("but");
+												let textp = document.getElementById("textp");
+												tmp.innerText = 'Осталось '+(req-clicks)+' раз';
+												if (req-clicks == 0) {
+																tmp.remove();
+																textp.innerText = 'Идите в 22';
+												}
+								}
+				</script>
+</body>
 </html>
